@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Inter:wght@200;400;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0A0A0A;
+  --color-surface: #121212;
+  --color-ink: #E2E2E2;
+  --color-accent: #C4A484;
+  --color-border: #2A2A2A;
+  --color-board-white: #E2E2E2;
+  --color-board-black: #1A1A1A;
+  
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-ink font-sans selection:bg-accent/30;
+  }
+}
+
+.chess-grid {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  grid-template-rows: repeat(8, minmax(0, 1fr));
+}
+
+.square {
+  aspect-ratio: 1 / 1;
+  @apply relative flex items-center justify-center transition-colors duration-200 cursor-pointer;
+}
+
+.square-white {
+  background-color: var(--color-board-white);
+  color: #121212;
+}
+
+.square-black {
+  background-color: var(--color-board-black);
+  color: #E2E2E2;
+}
+
+.move-log-container {
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}

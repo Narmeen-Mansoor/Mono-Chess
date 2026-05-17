@@ -1,0 +1,6 @@
+{
+  "name": "MONO // Chess",
+  "description": "A high-fidelity, minimalist monochrome chess engine powered by Gemini AI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
